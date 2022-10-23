@@ -34,6 +34,10 @@ app.get("/api/twitter", (req, res) => {
   });
 });
 
+app.get("/api/:id", (req, res) => {
+  res.status(200).send(req.params.id);
+});
+
 const PORT = process.env.PORT || 8001;
 
 app.listen(PORT, () => {
